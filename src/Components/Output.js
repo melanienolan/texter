@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 
 const Output = props => {
-  return (
-    <div>
-      <p>
-        {props.value}
-      </p>
-    </div>
-  );
+  return <textarea value={props.value} />;
 };
 
 export default Output;
