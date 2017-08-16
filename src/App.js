@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Input from './Components/Input';
 import Output from './Components/Output';
 import Button from './Components/Button';
+import Count from './Components/Count';
 import logo from './logo.svg';
 import './App.css';
 
@@ -27,6 +28,7 @@ class App extends Component {
       <div>
         <Input onInputChange={value => this.onInputChange(value)} />
         <Output value={this.state.value} />
+        <Count count={this.state.count} />
         <Button action="copy" />
         <Button action="clear" />
       </div>
