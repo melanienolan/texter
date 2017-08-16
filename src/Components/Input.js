@@ -8,7 +8,6 @@ const Input = props => {
         placeholder="Enter text"
         onChange={e => props.onInputChange(e.target.value)}
       />
-      <button type="submit" />
     </form>
   );
 };
