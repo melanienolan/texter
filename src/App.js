@@ -3,6 +3,7 @@ import ClipboardButton from 'react-clipboard.js';
 import Input from './Components/Input';
 import Output from './Components/Output';
 import ClearButton from './Components/ClearButton';
+import EmojiButton from './Components/EmojiButton';
 import Count from './Components/Count';
 import logo from './logo.svg';
 import './App.css';
@@ -32,6 +33,13 @@ class App extends Component {
       count: 0
     });
   }
+  onEmojiClick() {
+    let index = emojis.findIndex(emoji => emoji === this.state.emoji);
+    index = index < emojis.length - 1 ? ++index : 0;
+    this.setState({
+      emoji: emojis[index]
+    });
+  }
   render() {
     return (
       <div>
@@ -44,6 +52,10 @@ class App extends Component {
           Copy
         </ClipboardButton>
         <ClearButton onClearClick={() => this.onClearClick()} />
+        <EmojiButton
+          emoji={String.fromCodePoint(this.state.emoji)}
+          onEmojiClick={() => this.onEmojiClick()}
+        />
       </div>
     );
   }
