@@ -1,10 +1,13 @@
 import React from 'react';
+import glamorous from 'glamorous';
+
+const PTag = glamorous.p({});
 
 const Count = props => {
   return (
-    <p>
+    <PTag>
       {props.count}
-    </p>
+    </PTag>
   );
 };
 
