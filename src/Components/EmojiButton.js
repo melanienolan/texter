@@ -1,10 +1,13 @@
 import React from 'react';
+import glamorous from 'glamorous';
+
+const StyledEmojiButton = glamorous.button({});
 
 const EmojiButton = props => {
   return (
-    <button onClick={() => props.onEmojiClick()}>
+    <StyledEmojiButton onClick={() => props.onEmojiClick()}>
       {props.emoji}
-    </button>
+    </StyledEmojiButton>
   );
 };
 
