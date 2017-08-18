@@ -1,14 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import glamorous from 'glamorous';
+
+const StyledInput = glamorous.input({});
 
 const Input = props => {
   return (
-    <form action="">
-      <input
-        type="text"
-        placeholder="Enter text"
-        onChange={e => props.onInputChange(e.target.value)}
-      />
-    </form>
+    <StyledInput
+      type="text"
+      placeholder="Enter text"
+      onChange={e => props.onInputChange(e.target.value)}
+    />
   );
 };
 
